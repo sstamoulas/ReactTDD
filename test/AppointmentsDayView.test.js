@@ -15,10 +15,10 @@ describe('Appointment', () => {
       firstName: 'Ashley',
       lastName: 'Meow',
       phoneNumber: '(202) 753-4611',
-      stylist: 'Jean Claude',
-      service: 'Hair Cuttery',
-      notes: 'TBD',
-    }
+    },
+    stylist: 'Jean Claude',
+    service: 'Hair Cuttery',
+    notes: 'TBD',
   }
   let customer
   let container
@@ -64,17 +64,17 @@ describe('Appointment', () => {
 
   it('renders the customer stylist name', () => {
     render(<Appointment {...appointment} />)
-    expect(container.textContent).toMatch(appointment.customer.stylist)
+    expect(container.textContent).toMatch(appointment.stylist)
   })
 
   it('renders the customer salon service', () => {
     render(<Appointment {...appointment} />)
-    expect(container.textContent).toMatch(appointment.customer.service)
+    expect(container.textContent).toMatch(appointment.service)
   })
 
   it('renders the customer appointment notes', () => {
     render(<Appointment {...appointment} />)
-    expect(container.textContent).toMatch(appointment.customer.notes)
+    expect(container.textContent).toMatch(appointment.notes)
   })
 
   it('renders the heading to the customer appointment', () => {
